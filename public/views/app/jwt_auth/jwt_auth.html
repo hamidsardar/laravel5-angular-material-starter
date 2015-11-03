@@ -1,0 +1,35 @@
+<md-content class="Page-Container" ng-controller="JwtAuthCtrl" layout="column" layout-align="start center">
+
+    <md-card>
+
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>angular/config/auth.js</h2>
+            </div>
+        </md-toolbar>
+
+        <md-card-content class="language-markup"><pre><code class="line-numbers language-* language-javascript">
+(function (){
+"use strict";
+
+    angular.module('app.config').config(function ($authProvider){
+        // Satellizer configuration that specifies which API
+        // route the JWT should be retrieved from
+        $authProvider.loginUrl = '/api/1/authenticate/auth';
+    });
+
+})();</code></pre>
+        </md-card-content>
+
+        <md-card-content>
+            <p>
+            	JWT-auth is configured to work out of the box with dingo/api. Checkout the <a ui-sref="app.rest_api">REST API</a> docs.
+            </p>
+            <!--<p>
+                <md-button ng-click="requestToken()">Request Token</md-button>
+            </p>-->
+        </md-card-content>
+
+    </md-card>
+
+</md-content>
